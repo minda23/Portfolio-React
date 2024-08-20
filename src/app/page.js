@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import MainSection from "./Components/MainSection"
 import AboutMe from "./Components/AboutMe"
 
+
 export default function Home() {
   return (
     <div>
@@ -11,3 +12,6 @@ export default function Home() {
     </div>
   );
 }
+
+
+

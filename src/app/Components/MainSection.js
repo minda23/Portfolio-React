@@ -1,32 +1,25 @@
 "use client";
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import "./MainSection.css";
-import { useState, useEffect } from 'react';
-
 
 const MainSection = () => {
-    const fullTitle = "JUNIOR FRONTEND DEVELOPER & CODER"
-    const [title, setTitle] = useState(""); // counter je vlastnosť čo je nula, setCounter je funkcia na zmenu toho countera
-    const [counter, setCounter] = useState();
-    const [time, setTime] = useState(0);
+    const fullTitle = "JUNIOR FRONTEND DEVELOPER & CODER";
+    const [title, setTitle] = useState("");
+    const [counter, setCounter] = useState(0);
 
-
-
-    // fulltitle je premmenna z riadka 8
-    // set title je prvy parameter counter je druhy parameter a ten useefect vlastne vola že ked sa niečo zmeni na 1 alebo 2 tak bude volat
-    // stale ako sa meni ten counter sa vola ta funkcia useEffect , može tam byť aj counter 2  a tiež sa bude volat useEffect
-    // čo sa stane že klikneme na ten gombik, tak vlastne sa cez ten set counter
-    // aktualizuje useStae{0} na useState{1}
-    useEffect(() => setTitle(title + fullTitle[counter]), [counter])
     useEffect(() => {
-        const timer = setInterval(() => {
-            setTime(prevTime => prevTime + 1);
-        }, 1000);
+        if (counter < fullTitle.length) {// mame možnosť vratit v tej podmienke do useeffectu
+            const timer = setInterval(() => { // set interval by mal v sebe dve funkcie a potom ten set title by bola jedna 
+                // set counter by bola druha
+                setTitle(prev => prev + fullTitle[counter]);
+                setCounter(prev => prev + 1);
 
-        return () => {
-            clearInterval(timer);
-        };
-    }, []);
+            }, 100);
+
+            return () => clearInterval(timer);//
+        }
+    }, [counter, fullTitle]);// toto je druhy parameter array na ktore mame reagovať ked sa zmeni dajme tomu
+    // counter alebo niečo sa zmeni vo fulltittle tak to chcem spustiť v tom useeeffecte.
 
 
     return (
