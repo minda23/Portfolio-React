@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import "./MainSection.css";
 
+
 const MainSection = () => {
     const fullTitle = "JUNIOR FRONTEND DEVELOPER & CODER";
     const [title, setTitle] = useState("");
