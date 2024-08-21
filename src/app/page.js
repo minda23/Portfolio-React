@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import MainSection from "./Components/MainSection"
 import AboutMe from "./Components/AboutMe"
+import Projects from "./Components/Projects"
 
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
     <div>
       <MainSection />
       <AboutMe />
+      <Projects />
     </div>
   );
 }
