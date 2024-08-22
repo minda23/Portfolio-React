@@ -1,0 +1,35 @@
+#created_by {
+    background-color: black;
+    padding: 3rem;
+    text-align: center;
+}
+
+#who_create {
+    color: white;
+}
+
+/*arrow up*/
+#navrch {
+    box-sizing: content-box;
+    border: solid var(--farebny) 0.15rem;
+    width: 4.3rem;
+    line-height: 4.3rem;
+    border-radius: 50%;
+    box-shadow: 0 0 0.1rem 0 #000;
+    position: fixed;
+    text-align: center;
+    right: 1rem;
+    bottom: 0.5rem;
+    display: block;
+    z-index: 20;
+    overflow: hidden;
+    opacity: 0;
+    background-color: #007BFF;
+}
+
+#navrch i {
+    color: white;
+    font-size: 2rem;
+    position: relative;
+    top: 0.5rem;
+}

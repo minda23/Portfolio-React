@@ -1,0 +1,95 @@
+.headings_contact {
+    font-size: 2.2rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.two_sections1 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.contact_item p {
+    font-size: 1rem;
+    margin: 2rem;
+
+}
+
+.ikona_fa {
+    margin-left: -2rem;
+
+}
+
+.ikona_fa {
+    margin-right: 1rem;
+}
+
+.write_me {
+    margin-bottom: 2rem;
+}
+
+/*formular*/
+
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+
+
+form input,
+textarea {
+    border-radius: 2rem;
+    border: none;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+input::placeholder {
+    font-size: 1rem;
+}
+
+textarea::placeholder {
+    font-size: 1rem;
+    position: relative;
+    left: -1rem;
+
+}
+
+#first_parts input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    gap: 1rem;
+    box-sizing: border-box;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    padding: 2rem;
+}
+
+input[type="submit"] {
+    align-self: flex-start;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    background-color: #0096C7;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+input[type="submit"]:hover {
+    background-color: #0096C7;
+}

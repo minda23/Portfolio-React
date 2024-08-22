@@ -1,0 +1,70 @@
+#education_description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 2rem;
+    padding: 3rem;
+
+}
+
+.headings_education {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: -6rem;
+}
+
+.two_sections {
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.course_education {
+    margin-top: -9rem;
+    margin-bottom: 2rem;
+    transform: translateX(10%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    opacity: 1;
+}
+
+.school_education {
+    transform: translateX(10%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    opacity: 1;
+    margin-top: -2rem
+}
+
+.course_education p {
+    font-size: 1.2rem;
+}
+
+.school_education p {
+    font-size: 1.2rem;
+}
+
+.course_education h6 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+
+}
+
+.school_education h6 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.academy {
+    margin-bottom: 1rem;
+    color: grey;
+
+}
+
+
+.school {
+    margin-bottom: 1rem;
+    color: grey;
+
+}
