@@ -5,7 +5,7 @@ const FooterCard = (props) => {
     return (
         <div>
             <div id="who_create">
-                <p>© Copyright by {text}</p>
+                <p> {text}</p>
             </div>
             <div id="navrch">
                 <i className={arrow}></i>

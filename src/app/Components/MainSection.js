@@ -9,7 +9,7 @@ const MainSection = () => {
     const [counter, setCounter] = useState(0);
 
     useEffect(() => {
-        if (counter < fullTitle.length) {// mame možnosť vratit v tej podmienke do useeffectu
+        if (counter < fullTitle.length) { //mame možnosť vratit v tej podmienke do useeffectu
             const timer = setInterval(() => { // set interval by mal v sebe dve funkcie a potom ten set title by bola jedna 
                 // set counter by bola druha
                 setTitle(prev => prev + fullTitle[counter]);
