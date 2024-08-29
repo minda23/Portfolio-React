@@ -7,6 +7,7 @@ const AboutMeCard = (props) => {
     return (
 
         <div className="item_about" id="item_about1" > <p>{text}</p></div >
+
     )
 }
 
