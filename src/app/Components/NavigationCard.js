@@ -3,9 +3,8 @@ import React from "react"
 
 
 const NavigationCard = (props) => {
-    const { text, burger, crossnavigationID = "navigation",
-        burgermenuID = "burger_menu",
-        crossID = "cross",
+    const { text, burger,
+
 
     } = props;
     return (

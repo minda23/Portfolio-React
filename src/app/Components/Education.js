@@ -8,36 +8,53 @@ import EducationCard from "./EducationCard"
 const Education = () => {
 
     return (
-        <div>
-            <div id="education_description">
+
+
+        <div id="education_description">
+            <div className="headings_education">
                 <div>
-                    <EducationCard texth5="Vzdelanie" />
-                </div>
-                <div>
-                    <div className="course_education" id="course">
-                        <EducationCard course="WEB DEVELOPER ACADEMY" coursetext="SmartyAcademy | Mar 2024 - Máj 2024" coursetext1="Vytvoril som responzívnu webovú stránku v HTML a následne
-							som do nej integroval JavaScript a jQuery" coursetext2="Úspešne som zvládol 64 testov a dosiahol certifikát" />
-
-                    </div>
-                    <div className="school_education" id="course1">
-                        <EducationCard school="TECHNICKÉ LÝCEUM" schooltext="Stredná odborná škola technická v Humennom | Sep 2013 – Jún 2017
-							Ukončil som štúdium maturitnou skúškou
-							Programoval som v HTML, CSS, PHP a Joomla
-							Pracoval som s grafickými programami Blender, Gimp, Inscape a
-								strojárskym programom Solid Edge (3D CAD software)
-                        " />
-
-
-
-                    </div>
+                    <h5 style={{ marginBottom: "7rem" }}>Vzdelanie</h5>
                 </div>
             </div>
-        </div>
-    )
+            <div className="two_sections">
+                <div className="course_education" id="course">
+                    <EducationCard course="WEB DEVELOPER ACADEMY"></EducationCard>
+                    <div className='academy'>
+                        <EducationCard text="SmartyAcademy | Mar 2024 - Máj 2024"></EducationCard>
+                    </div>
+                    <EducationCard text="Vytvoril som responzívnu webovú stránku v HTML a následne
+                                    som do nej integroval JavaScript a jQuery"></EducationCard>
+                    <EducationCard text="Úspešne som zvládol 64 testov a dosiahol certifikát"></EducationCard>
 
+
+
+                </div>
+                <div className="school_education" id="course1">
+                    <div>
+                        <h5 style={{ fontSize: "1.8rem" }}>Technické lyceum</h5>
+                    </div>
+                    <div className="school">
+                        <EducationCard text="Stredná odborná škola technická v Humennom | Sep 2013 – Jún 2017"></EducationCard>
+                    </div>
+                    <EducationCard text="Ukončil som štúdium maturitnou skúškou"></EducationCard>
+                    <EducationCard text="Programoval som v HTML, CSS, PHP a Joomla"></EducationCard>
+                    <EducationCard text="Pracoval som s grafickými programami Blender, Gimp, Inscape a"></EducationCard>
+                    <EducationCard text="strojárskym programom Solid Edge (3D CAD software)"></EducationCard>
+
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+    )
 }
 
 
 
-
 export default Education
+
+

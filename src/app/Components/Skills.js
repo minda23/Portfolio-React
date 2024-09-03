@@ -1,20 +1,28 @@
 import React from 'react';
 import "./Skills.css"
-import FooterCard from './FooterCard';
+import SkillsCard from './SkillsCard';
 
 
 const Skills = () => {
     return (
-        <div>
+        <div id="skills">
+            <div id="skills_main">
+                <div className='skill_text'>
+                    <h4 style={{ marginBottom: "1rem" }}>schopnosti a nástroje</h4>
+                    <p style={{ marginBottom: "1rem" }}>Tieto technológie ovládam:</p>
+                </div>
+                <div id='skills_images'>
 
-            <FooterCard text="Schopnosti a nástroje" />
-            <FooterCard text1="Tieto technológie ovládam:" />
-            <FooterCard image="images/html.svg " />
-            <FooterCard image="images/css.svg " />
-            <FooterCard image="images/javascript.svg " />
-            <FooterCard image="images/jquery.svg " />
-            <FooterCard image="images/gimp.svg " />
-            <FooterCard image="images/sublime-text.svg" />
+
+                    <SkillsCard image="images/html.svg " />
+                    <SkillsCard image="images/css.svg " />
+                    <SkillsCard image="images/javascript.svg " />
+                    <SkillsCard image="images/jquery.svg " />
+                    <SkillsCard image="images/gimp.svg " />
+                    <SkillsCard image="images/sublime-text.svg" />
+                </div>
+
+            </div>
         </div>
     )
 }

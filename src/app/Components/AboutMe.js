@@ -1,5 +1,4 @@
 "use client";
-
 import "./AboutMe.css";
 import AboutMeCard from './AboutMeCard';
 
