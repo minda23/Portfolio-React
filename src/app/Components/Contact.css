@@ -5,6 +5,27 @@
     flex-wrap: wrap;
 }
 
+#heading_contact {
+    text-align: center;
+}
+
+
+
+
+
+#heading_contact h6 {
+    margin-top: 2rem;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    columns: #0096c7;
+    font-weight: bold;
+}
+
+#heading_contact p {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+}
+
 .two_sections1 {
     display: flex;
     justify-content: space-between;

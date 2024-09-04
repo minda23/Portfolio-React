@@ -7,10 +7,13 @@ const Footer = () => {
 
 
     return (
-        <div className='headings_contact'>
+        <div id='created_by'>
+            <div id='who_create'>
 
-            <FooterCard text="© Copyright by Lukáš Minda" />
-            <FooterCard arrow="fa-solid fa-arrow-up" />
+                <FooterCard text="© Copyright by Lukáš Minda" />
+
+                <FooterCard style={{ display: "flex", justifyContent: "right" }} arrow="fa-solid fa-arrow-up" />
+            </div>
         </div>
     );
 };

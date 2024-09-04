@@ -4,13 +4,10 @@ const FooterCard = (props) => {
     const { text, arrow } = props;
     return (
         <div>
-            <div id="who_create">
-                <p> {text}</p>
-            </div>
-            <div id="navrch">
-                <i className={arrow}></i>
-            </div>
+            <p>{text}</p>
+            <i>{arrow}</i>
         </div>
+
     );
 };
 
