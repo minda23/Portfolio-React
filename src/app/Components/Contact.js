@@ -1,11 +1,12 @@
 import React from 'react';
-import ContactCard from './ContactCard';
+import ContactInfo from './ContactInfo';
+import ContactForm from './ContactForm';
 import "./Contact.css";
 import { FaPerson } from "react-icons/fa6";
 import { CiLocationOn } from "react-icons/ci";
 import { FaEnvelope } from "react-icons/fa";
 
-const Education = () => {
+const Contact = () => {
     return (
         <div id='contact'>
             <div id="heading_contact">
@@ -15,24 +16,23 @@ const Education = () => {
             <div className="headings_contact">
                 <div>
                     <div style={{ textAlign: "center", marginBottom: "1rem" }}>
-                        <ContactCard headings="Ozvite sa" className="call_me" />
+                        <h2 className="call_me">Ozvite sa</h2>
                     </div>
                     <div className="contact_item">
-                        <ContactCard text="Meno: Lukáš Minda">
-                            <FaPerson />
-                        </ContactCard>
-                        <ContactCard text="Humenné, Slovensko">
-                            <CiLocationOn />
-                        </ContactCard>
-                        <ContactCard text="Email: luki.minda@gmail.com">
-                            <FaEnvelope />
-                        </ContactCard>
+                        <ContactInfo text="Meno: Lukáš Minda" icon={<FaPerson />} />
+
+                        <ContactInfo text="Humenné, Slovensko" icon={<CiLocationOn />} />
+
+                        <ContactInfo text="Email: luki.minda@gmail.com" icon={<FaEnvelope />} />
+
+
                     </div>
                 </div>
+
                 <div className="kontajner">
                     <div>
                         <div style={{ textAlign: "center", marginBottom: "1rem" }}>
-                            <ContactCard headings="Napíšte mi" className="write_me" />
+                            <h2 className="write_me">Napíšte mi</h2>
                         </div>
                         <div className="container">
                             <div id="form">
@@ -79,4 +79,4 @@ const Education = () => {
     );
 };
 
-export default Education;
+export default Contact;

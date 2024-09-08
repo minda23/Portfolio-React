@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 
 
 
-const ContactCard = (props) => {
+const ContactInfo = (props) => {
     const [isInView, setIsInView] = useState(0);
     const myRef = useRef(null);
     const myOpacity = isInView ? 1 : 0;
@@ -39,27 +39,32 @@ const ContactCard = (props) => {
 
 
 
-    const { headings, text, icon, form_input,
+    const { text, icon,
     } = props;
     const ItemAboutStyles = {
         opacity: myOpacity,
         transform: isInView ? 'translateX(0px)' : 'translateX(-100px)',
         transition: 'transform 0.5s ease-out',
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center"
     }
     return (
-        <div ref={myRef} style={ItemAboutStyles}>
+        <p ref={myRef} style={ItemAboutStyles} >
 
-            <h6>{headings}</h6>
-            <p>{text} </p>
-            <i>{icon}</i>
+            {icon}
+            {" "}
+            {text}
 
 
-        </div >
+
+
+        </p >
     )
 }
 
 
-export default ContactCard;
+export default ContactInfo;
 
 
 

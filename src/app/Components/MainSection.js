@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import "./MainSection.css";
 import { IoLogoGithub } from "react-icons/io5";
 import { FaLinkedin } from "react-icons/fa";
-import { FaEnvelope } from "react-icons/fa";
+import { FaEnvelope } from "react-icons/fa"; // použivať git a vedieť robiť commity 
 
 
 
