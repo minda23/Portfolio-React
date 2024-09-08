@@ -15,6 +15,7 @@ const Contact = () => {
     const [name, setName] = useState("");// chceme aby sa nastavila funkcia setName ked sa niečo zmeni v textarea.
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
+    const [button, setButton] = useState("");
 
 
 
@@ -53,6 +54,7 @@ const Contact = () => {
                                 <ContactForm value={name} setValue={setName} />
                                 <ContactForm value={email} setValue={setEmail} />
                                 <ContactForm value={message} setValue={setMessage} />
+                                <ContactForm value={button} setValue={setButton} />
                             </div>
                         </div>
                     </div>

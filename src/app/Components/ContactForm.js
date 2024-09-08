@@ -54,7 +54,7 @@ const ContactCard = (props) => {
 
 
             <textarea onChange={e => setValue(e.target.value)} id="message" name="message" rows="1" cols="50" placeholder="Napišťe mi správu" required></textarea>
-
+            <button onClick={e => setValue(window.location.href = "mailto:xyz@yourapplicationdomain.com")} value="submit"></button>
 
 
         </div >

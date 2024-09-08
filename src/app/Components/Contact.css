@@ -265,12 +265,12 @@ input[type="submit"]:hover {
 
 
 
-    .call_me h6 {
+    .call_me {
         font-size: 1.2rem;
         text-align: center;
     }
 
-    .write_me h6 {
+    .write_me {
         font-size: 1.3rem;
         display: flex;
         justify-content: center;
