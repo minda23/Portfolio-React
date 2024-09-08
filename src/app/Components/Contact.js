@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import ContactInfo from './ContactInfo';
 import ContactForm from './ContactForm';
@@ -5,8 +6,21 @@ import "./Contact.css";
 import { FaPerson } from "react-icons/fa6";
 import { CiLocationOn } from "react-icons/ci";
 import { FaEnvelope } from "react-icons/fa";
+import { useState } from 'react';
+
+
+
 
 const Contact = () => {
+    const [name, setName] = useState("");// chceme aby sa nastavila funkcia setName ked sa niečo zmeni v textarea.
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
+
+
+
+
+
+
     return (
         <div id='contact'>
             <div id="heading_contact">
@@ -16,7 +30,7 @@ const Contact = () => {
             <div className="headings_contact">
                 <div>
                     <div style={{ textAlign: "center", marginBottom: "1rem" }}>
-                        <h2 className="call_me">Ozvite sa</h2>
+                        <h6 style={{ fontSize: "1.3rem" }} className="call_me">Ozvite sa</h6>
                     </div>
                     <div className="contact_item">
                         <ContactInfo text="Meno: Lukáš Minda" icon={<FaPerson />} />
@@ -32,44 +46,13 @@ const Contact = () => {
                 <div className="kontajner">
                     <div>
                         <div style={{ textAlign: "center", marginBottom: "1rem" }}>
-                            <h2 className="write_me">Napíšte mi</h2>
+                            <h6 style={{ fontSize: "1.3rem" }} className="write_me">Napíšte mi</h6>
                         </div>
                         <div className="container">
                             <div id="form">
-                                <form action="/sending.php" method="post">
-                                    <div id="first_parts">
-                                        <input
-                                            type="text"
-                                            id="name"
-                                            name="name"
-                                            placeholder="Meno"
-                                            required
-                                            className="contact_input"
-                                        />
-                                        <input
-                                            type="email"
-                                            id="email"
-                                            name="email"
-                                            placeholder="Email"
-                                            required
-                                            className="contact_input"
-                                        />
-                                    </div>
-                                    <textarea
-                                        id="message"
-                                        name="message"
-                                        rows="4"
-                                        cols="50"
-                                        placeholder="Napíšte mi správu"
-                                        required
-                                        className="contact_textarea"
-                                    />
-                                    <input
-                                        type="submit"
-                                        value="Submit"
-                                        className="button"
-                                    />
-                                </form>
+                                <ContactForm value={name} setValue={setName} />
+                                <ContactForm value={email} setValue={setEmail} />
+                                <ContactForm value={message} setValue={setMessage} />
                             </div>
                         </div>
                     </div>

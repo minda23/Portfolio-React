@@ -1,4 +1,6 @@
 "use client"
+import build from "next/dist/build";
+import { buildCustomRoute } from "next/dist/server/lib/router-utils/filesystem";
 import React from "react";
 import { useState, useEffect, useRef } from 'react';
 
@@ -39,7 +41,7 @@ const ContactCard = (props) => {
 
 
 
-    const { Form
+    const { value, setValue
     } = props;
     const ItemAboutStyles = {
         opacity: myOpacity,
@@ -49,11 +51,17 @@ const ContactCard = (props) => {
     return (
         <div ref={myRef} style={ItemAboutStyles}>
 
-            <Form>{Form}</Form>
+
+
+            <textarea onChange={e => setValue(e.target.value)} id="message" name="message" rows="1" cols="50" placeholder="Napišťe mi správu" required></textarea>
 
 
 
         </div >
+
+        /* treba pridať ten gombik a ked sa stlači ale klikne sa na mailto čiže ked kliknem tak v tom
+          mailto sa to uloži že budu tie veci skopirovane v tom mail to vlastne čo uživateľ napisal 
+          na stránke */ // budem musieť presne špicifovať ako sa tie udaje tam dostanu.
     )
 }
 
