@@ -32,7 +32,7 @@
     transition: opacity 0.5s ease-in-out;
 }
 
-.icons i {
+.icons a {
     opacity: 1;
     font-size: 3rem;
     color: #0096C7;
@@ -41,7 +41,7 @@
 
 }
 
-.icons i:hover {
+.icons a:hover {
     transform: scale(1.2);
 
 }

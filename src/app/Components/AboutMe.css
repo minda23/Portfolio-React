@@ -85,3 +85,23 @@
     transform: translateX(0) !important;
     opacity: 1 !important;
 }
+
+
+@media (max-width: 768px) {
+
+    .item_about {
+        max-width: 25rem;
+
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .item_about {
+        max-width: 16rem;
+
+    }
+
+}

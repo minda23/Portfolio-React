@@ -159,3 +159,41 @@
     z-index: 1;
     pointer-events: none;
 }
+
+@media only screen and (max-width: 600px) {
+    .text_project {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        top: 42%;
+    }
+
+    .text_project1 a {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    .text_project2 a {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .text_project {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        top: 35%;
+    }
+
+    .text_project1 a {
+        font-size: 0.8rem;
+        padding: 1rem;
+    }
+
+    .text_project2 a {
+        font-size: 0.8rem;
+        padding: 1rem;
+    }
+}

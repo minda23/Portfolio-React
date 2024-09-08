@@ -1,6 +1,9 @@
 import React from 'react';
 import ContactCard from './ContactCard';
 import "./Contact.css";
+import { FaPerson } from "react-icons/fa6";
+import { CiLocationOn } from "react-icons/ci";
+import { FaEnvelope } from "react-icons/fa";
 
 const Education = () => {
     return (
@@ -11,22 +14,26 @@ const Education = () => {
             </div>
             <div className="headings_contact">
                 <div>
-                    <ContactCard headings="Ozvite sa" className="call_me" />
+                    <div style={{ textAlign: "center", marginBottom: "1rem" }}>
+                        <ContactCard headings="Ozvite sa" className="call_me" />
+                    </div>
                     <div className="contact_item">
                         <ContactCard text="Meno: Lukáš Minda">
-                            <i className="ikona_fa fa-solid fa-person"></i>
+                            <FaPerson />
                         </ContactCard>
                         <ContactCard text="Humenné, Slovensko">
-                            <i className="ikona_fa fa-solid fa-location-dot"></i>
+                            <CiLocationOn />
                         </ContactCard>
                         <ContactCard text="Email: luki.minda@gmail.com">
-                            <i className="ikona_fa fa-solid fa-envelope"></i>
+                            <FaEnvelope />
                         </ContactCard>
                     </div>
                 </div>
                 <div className="kontajner">
                     <div>
-                        <ContactCard text="Napíšte mi" className="write_me" />
+                        <div style={{ textAlign: "center", marginBottom: "1rem" }}>
+                            <ContactCard headings="Napíšte mi" className="write_me" />
+                        </div>
                         <div className="container">
                             <div id="form">
                                 <form action="/sending.php" method="post">

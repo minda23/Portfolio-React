@@ -10,10 +10,10 @@ const Education = () => {
     return (
 
 
-        <div id="education_description">
+        <div id="education_description" style={{ marginLeft: "-3.5rem" }}>
             <div className="headings_education">
                 <div>
-                    <h5 style={{ marginBottom: "7rem" }}>Vzdelanie</h5>
+                    <h5 style={{ marginBottom: "7rem", }}>Vzdelanie</h5>
                 </div>
             </div>
             <div className="two_sections">

@@ -1,6 +1,10 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import "./MainSection.css";
+import { IoLogoGithub } from "react-icons/io5";
+import { FaLinkedin } from "react-icons/fa";
+import { FaEnvelope } from "react-icons/fa";
+
 
 
 const MainSection = () => {
@@ -31,13 +35,14 @@ const MainSection = () => {
                     <h2 id="heading">{title}</h2>
                     <div className="icons" id="icons">
                         <a href="https://github.com/minda23" target="_blank" rel="noopener noreferrer">
-                            <i className="fa-brands fa-github"></i>
+                            <IoLogoGithub />
                         </a>
                         <a href="https://www.linkedin.com/in/luk%C3%A1%C5%A1-minda-b4a756119/" target="_blank" rel="noopener noreferrer">
-                            <i className="fa-brands fa-linkedin"></i>
+                            <FaLinkedin />
                         </a>
                         <a href="mailto:someone@example.com">
-                            <i className="fa fa-envelope"></i>
+                            <FaEnvelope />
+
                         </a>
                     </div>
                 </div>
