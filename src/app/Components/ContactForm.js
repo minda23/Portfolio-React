@@ -1,6 +1,4 @@
 "use client"
-import build from "next/dist/build";
-import { buildCustomRoute } from "next/dist/server/lib/router-utils/filesystem";
 import React from "react";
 import { useState, useEffect, useRef } from 'react';
 
@@ -54,7 +52,16 @@ const ContactCard = (props) => {
 
 
             <textarea onChange={e => setValue(e.target.value)} id="message" name="message" rows="1" cols="50" placeholder="Napišťe mi správu" required></textarea>
-            <button onClick={e => setValue(window.location.href = "mailto:xyz@yourapplicationdomain.com")} value="submit"></button>
+            <button
+                onClick={() => {
+                    const email = "xyz@yourapplicationdomain.com";
+                    const subject = "Your Subject Here";
+                    const body = encodeURIComponent(value); // Ensure to encode the user input
+                    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+                }}
+            >
+                Send Email
+            </button>
 
 
         </div >
@@ -64,6 +71,7 @@ const ContactCard = (props) => {
           na stránke */ // budem musieť presne špicifovať ako sa tie udaje tam dostanu.
     )
 }
+
 
 
 export default ContactCard;
