@@ -2,6 +2,8 @@
 import React from 'react';
 import ContactInfo from './ContactInfo';
 import ContactForm from './ContactForm';
+import InputCard from './InputCard';
+
 import "./Contact.css";
 import { FaPerson } from "react-icons/fa6";
 import { CiLocationOn } from "react-icons/ci";
@@ -15,11 +17,16 @@ const Contact = () => {
     const [name, setName] = useState("");// chceme aby sa nastavila funkcia setName ked sa niečo zmeni v textarea.
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
-    const [button, setButton] = useState("");
+    const [input, setInput] = useState("");
 
+    const handleSubmit = () => {
+        const subject = `Message from ${name}`;
+        const body = `Name: ${name}Email: ${email}Message: ${message}`;
+        const mailtoUrl = `mailto:luki.minda@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-
-
+        // Open the default mail client
+        window.location.href = mailtoUrl;
+    };
 
 
     return (
@@ -54,8 +61,14 @@ const Contact = () => {
                                 <ContactForm value={name} setValue={setName} />
                                 <ContactForm value={email} setValue={setEmail} />
                                 <ContactForm value={message} setValue={setMessage} />
-                                <ContactForm value={button} setValue={setButton} />
+                                <InputCard value={input} setValue={setInput} />
                             </div>
+                            <input
+                                type="button"
+                                className="button"
+                                value="Odeslat"
+                                onClick={handleSubmit} // Trigger handleSubmit on button click
+                            />
                         </div>
                     </div>
                 </div>

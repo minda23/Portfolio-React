@@ -5,7 +5,7 @@ import { useState, useEffect, useRef, } from 'react';
 
 
 
-const ContactCard = (props) => {
+const InputCard = (props) => {
     const [isInView, setIsInView] = useState(0);
     const myRef = useRef(null);
     const myOpacity = isInView ? 1 : 0;
@@ -38,41 +38,32 @@ const ContactCard = (props) => {
         };
     }, []);
 
-
-
-    const { value, setValue,
-    } = props;
     const ItemAboutStyles = {
         opacity: myOpacity,
         transform: isInView ? 'translateX(0px)' : 'translateX(-100px)',
         transition: 'transform 0.5s ease-out',
     }
+
+    const { valueBtn } = props;
+
+    const handleSubmit = (message) => {
+        console.log(message);
+    };
+
     return (
-
         <div ref={myRef} style={ItemAboutStyles}>
-
-
-
-            <textarea onChange={e => setValue(e.target.value)} id="message" name="message" rows="1" cols="50" placeholder="Napišťe mi správu" required></textarea>
-
-
-
-        </div >
-
-
-
-        /* treba pridať ten gombik a ked sa stlači ale klikne sa na mailto čiže ked kliknem tak v tom
-          mailto sa to uloži že budu tie veci skopirovane v tom mail to vlastne čo uživateľ napisal 
-          na stránke */ // budem musieť presne špicifovať ako sa tie udaje tam dostanu.
+            <input
+                type="button"
+                className="button"
+                value="Odeslat" // Directly setting the button text to "Odeslat"
+                onClick={() => handleSubmit("Clicked")}
+            />
+        </div>
     )
+
+
 }
 
 
 
-export default ContactCard;
-
-
-
-
-
-
+export default InputCard
