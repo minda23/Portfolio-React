@@ -53,7 +53,6 @@ const ContactInfo = (props) => {
         <p ref={myRef} style={ItemAboutStyles} >
 
             {icon}
-            {" "}
             {text}
 
 

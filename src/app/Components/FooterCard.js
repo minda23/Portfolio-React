@@ -4,8 +4,8 @@ const FooterCard = (props) => {
     const { text, arrow } = props;
     return (
         <div>
-            <p>{text}</p>
-            <i>{arrow}</i>
+            {text}
+            {arrow}
         </div>
 
     );

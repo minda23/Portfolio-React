@@ -21,7 +21,7 @@ const Contact = () => {
 
     const handleSubmit = () => {
         const subject = `Message from ${name}`;
-        const body = `Name: ${name}Email: ${email}Message: ${message}`;
+        const body = `Name: ${name}  Email: ${email}   Message: ${message}`;
         const mailtoUrl = `mailto:luki.minda@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
         // Open the default mail client
