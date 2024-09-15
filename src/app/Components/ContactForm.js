@@ -3,6 +3,9 @@ import React from "react";
 import { useState, useEffect, useRef, } from 'react';
 
 
+// use contect hook sa zdieľa ked chceme posuvať komponent bez propsu čiže je to čistejšie 
+// ak máma zložitu appku s 10 komponentami
+//
 
 
 const ContactCard = (props) => {
@@ -50,9 +53,6 @@ const ContactCard = (props) => {
     return (
 
         <div ref={myRef} style={ItemAboutStyles}>
-
-
-
             <textarea onChange={e => setValue(e.target.value)} id="message" name="message" rows="1" cols="50" placeholder="Napišťe mi správu" required></textarea>
 
 

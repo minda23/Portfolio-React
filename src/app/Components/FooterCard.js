@@ -1,11 +1,13 @@
 import React from "react";
 
 const FooterCard = (props) => {
-    const { text, arrow } = props;
+
+
+    const { text } = props;
     return (
         <div>
             {text}
-            {arrow}
+
         </div>
 
     );

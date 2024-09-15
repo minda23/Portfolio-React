@@ -10,7 +10,9 @@ import { CiLocationOn } from "react-icons/ci";
 import { FaEnvelope } from "react-icons/fa";
 import { useState } from 'react';
 
-
+// debugovanie je veľmi užitočne , ako sa to spusti a zastavi sa to pri kode 17.
+// keby som mal komplexnu kalkulaciu a robi niečo zložitejšie, môžem si to rozbiť na male časti, a 
+// ked mam nejaku chybu bug , tak to potrebujem ked hľadam chybu v kóde.
 
 
 const Contact = () => {
@@ -20,12 +22,20 @@ const Contact = () => {
     const [input, setInput] = useState("");
 
     const handleSubmit = () => {
-        const subject = `Message from ${name}`;
-        const body = `Name: ${name}  Email: ${email}   Message: ${message}`;
-        const mailtoUrl = `mailto:luki.minda@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        const subject = `Message from ${name}`;//predmet odoslania
+        const body = `Dobrý den pán Lukáš Minda
+
+${message}
+
+${name}`;
+        const mailtoUrl = `mailto:${encodeURIComponent(email)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        console.log((mailtoUrl))// v podstate je to rychlejšie ak preskočume na tento riadok rovno vidíme ,
+        // čo obsahuje variable const mailtoUrl , nemusime písať console.log() 
+        // čo musime dať do toho browseru , aby nam otvorilo email 
+        //ak dávame nejaky text do url adresy, tak niektore charaktery sa musia špecialne zmeniť.
 
         // Open the default mail client
-        window.location.href = mailtoUrl;
+        window.location.href = mailtoUrl;// my do toho url vsunujeme ten mail aby sa to otvorilo 
     };
 
 
@@ -41,11 +51,11 @@ const Contact = () => {
                         <h6 style={{ fontSize: "1.3rem" }} className="call_me">Ozvite sa</h6>
                     </div>
                     <div className="contact_item">
-                        <ContactInfo text="Meno: Lukáš Minda" icon={<FaPerson />} />
+                        <ContactInfo text="Meno: Lukáš Minda" icon={<FaPerson style={{ fontSize: '1rem', margin: '10px' }} />} />
 
-                        <ContactInfo text="Humenné, Slovensko" icon={<CiLocationOn />} />
+                        <ContactInfo text="Humenné, Slovensko" icon={<CiLocationOn style={{ fontSize: '1rem', margin: '10px' }} />} />
 
-                        <ContactInfo text="Email: luki.minda@gmail.com" icon={<FaEnvelope />} />
+                        <ContactInfo text="Email: luki.minda@gmail.com" icon={<FaEnvelope style={{ fontSize: '1rem', margin: '10px' }} />} />
 
 
                     </div>
@@ -67,7 +77,8 @@ const Contact = () => {
                                 type="button"
                                 className="button"
                                 value="Odeslat"
-                                onClick={handleSubmit} // Trigger handleSubmit on button click
+                                onClick={handleSubmit} // prop onclick berie funkciu handleSubmit, možeme tam dať changecolor alebo 
+                            //change text. doesnt matter.
                             />
                         </div>
                     </div>

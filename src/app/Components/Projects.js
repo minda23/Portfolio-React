@@ -14,7 +14,7 @@ const Projects = () => {
                 <ProjectsCard imagePath="images/front_end.png" linkSite="https://front-end.sk/index.html" linkSource="https://github.com/minda23/Moje-projekty/blob/main/robot-it_web.zip" />
 
 
-                <ProjectsCard imagePath="images/portfolio.png" linkSite="https//:lukas-minda.sk" linkSource="https://github.com/minda23/Moje-projekty/blob/main/web_portfolio.zip" />
+                <ProjectsCard imagePath="images/portfolio.png" linkSite="https://portfolio-react-orpin-three.vercel.app/" linkSource="https://github.com/minda23/Portfolio-React" />
 
 
                 <ProjectsCard imagePath="images/shop_app.png" linkSite="https://shopadditem.netlify.app" linkSource="https://github.com/minda23/Moje-projekty/blob/main/product-list.zip" />
