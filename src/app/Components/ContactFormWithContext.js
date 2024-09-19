@@ -1,12 +1,19 @@
 "use client"
 import React from "react";
-import { useState, useEffect, useRef, } from 'react';
+import { useState, useEffect, useRef, useContext } from 'react';
+import FormContext from "./FormContext";
 
 
+// use context hook sa zdieľa ked chceme posuvať komponent bez propsu čiže je to čistejšie 
+// ak máma zložitu appku s 10 komponentami
+//
 
 
-const InputCard = (props) => {
+const ContactCard = () => {
     const [isInView, setIsInView] = useState(0);
+    const [name, setName] = useContext(FormContext);
+    const [email, setEmail] = useContext(FormContext);
+    const [message, setMessage] = useContext(FormContext);
     const myRef = useRef(null);
     const myOpacity = isInView ? 1 : 0;
 
@@ -38,27 +45,37 @@ const InputCard = (props) => {
         };
     }, []);
 
+
+
+
     const ItemAboutStyles = {
         opacity: myOpacity,
         transform: isInView ? 'translateX(0px)' : 'translateX(-100px)',
         transition: 'transform 0.5s ease-out',
     }
-
-    const { valueBtn } = props;
-
-    const handleSubmit = (message) => {
-        console.log(message);
-    };
-
     return (
+
         <div ref={myRef} style={ItemAboutStyles}>
+            <textarea onChange={e => setName(e.target.value)} id="message" name="message" rows="1" cols="50" placeholder="Napišťe mi správu" required></textarea>
 
-        </div>
+
+
+        </div >
+
+
+
+        /* treba pridať ten gombik a ked sa stlači ale klikne sa na mailto čiže ked kliknem tak v tom
+          mailto sa to uloži že budu tie veci skopirovane v tom mail to vlastne čo uživateľ napisal 
+          na stránke */ // budem musieť presne špicifovať ako sa tie udaje tam dostanu.
     )
-
-
 }
 
 
 
-export default InputCard
+export default ContactCard;
+
+
+
+
+
+

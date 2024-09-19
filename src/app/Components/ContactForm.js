@@ -3,7 +3,7 @@ import React from "react";
 import { useState, useEffect, useRef, } from 'react';
 
 
-// use contect hook sa zdieľa ked chceme posuvať komponent bez propsu čiže je to čistejšie 
+// use context hook sa zdieľa ked chceme posuvať komponent bez propsu čiže je to čistejšie 
 // ak máma zložitu appku s 10 komponentami
 //
 
