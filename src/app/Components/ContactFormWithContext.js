@@ -12,8 +12,6 @@ import FormContext from "./FormContext";
 const ContactCard = () => {
     const [isInView, setIsInView] = useState(0);
     const [name, setName] = useContext(FormContext);
-    const [email, setEmail] = useContext(FormContext);
-    const [message, setMessage] = useContext(FormContext);
     const myRef = useRef(null);
     const myOpacity = isInView ? 1 : 0;
 

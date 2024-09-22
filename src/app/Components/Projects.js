@@ -40,7 +40,7 @@ const Projects = () => {
 
 
 
-                <ProjectsCard imagePath="images/galeria.png" linkSite="https://galeria-minda.netlify.app" linkSource="https://github.com/minda23/Moje-projekty/blob/main/galleria-slideshow-site.zip" />
+                <ProjectsCard imagePath="images/galeria.png" linkSite="https://gallery-minda-app.netlify.app/" linkSource="https://github.com/minda23/Moje-projekty/blob/main/galleria-slideshow-site.zip" />
 
 
 

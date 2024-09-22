@@ -31,9 +31,9 @@ const Contact = () => {
         const subject = `Message from ${nameAndSetName[0]}`;//predmet odoslania, 
         const body = `Dobrý den pán Lukáš Minda
 
-${messageAndSetMessage}
+${emailAndsetEmail[0]}
 
-${nameAndSetName}`;
+${messageAndSetMessage[0]}`;
         const mailtoUrl = `mailto:${encodeURIComponent(emailAndsetEmail[0])}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
         console.log((mailtoUrl))// v podstate je to rychlejšie ak preskočume na tento riadok rovno vidíme ,
         // čo obsahuje variable const mailtoUrl , nemusime písať console.log() 
@@ -50,6 +50,7 @@ ${nameAndSetName}`;
 
     return (
         <FormContext.Provider value={nameAndSetName}>
+
             <div id='contact'>
                 <div id="heading_contact">
                     <h6>Kontaktujte ma</h6>
@@ -79,8 +80,8 @@ ${nameAndSetName}`;
                             <div className="container">
                                 <div id="form">
                                     <ContactFormWithContext />
-                                    <ContactFormWithContext name={email} setName={setEmail} />
-                                    <ContactFormWithContext name={message} setName={setMessage} />
+                                    <ContactFormWithContext />
+                                    <ContactFormWithContext />
 
 
                                     <InputCard value={input} setValue={setInput} />
@@ -98,6 +99,8 @@ ${nameAndSetName}`;
                 </div>
             </div>
         </FormContext.Provider>
+
+
     );
 };
 
