@@ -5,10 +5,12 @@ import ProjectsCard from "./ProjectsCard"
 // chceme dať jeden prop tomu AboutMeCard 
 
 
-const Projects = () => {
+const Projects = (props) => {
+
+    const { scrollRef } = props;
 
     return (
-        <div id="projects">
+        <div id="projects" ref={scrollRef}>
             <div id='part_project'>
 
                 <ProjectsCard imagePath="images/front_end.png" linkSite="https://front-end.sk/index.html" linkSource="https://github.com/minda23/Moje-projekty/blob/main/robot-it_web.zip" />

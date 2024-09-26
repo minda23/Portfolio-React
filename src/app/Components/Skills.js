@@ -3,9 +3,10 @@ import "./Skills.css"
 import SkillsCard from './SkillsCard';
 
 
-const Skills = () => {
+const Skills = (props) => {
+    const { scrollRef } = props
     return (
-        <div id="skills">
+        <div id="skills" ref={scrollRef}>
             <div id="skills_main">
                 <div className='skill_text'>
                     <h4 style={{ marginBottom: "1rem" }}>schopnosti a nástroje</h4>

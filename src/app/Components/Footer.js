@@ -4,9 +4,10 @@ import "./Footer.css";
 import FooterCard from './FooterCard';
 import FooterButton from './FooterButton';
 
-const Footer = () => {
+const Footer = (props) => {
+    const { scrollRef } = props;
     return (
-        <div id='created_by'>
+        <div id='created_by' ref={scrollRef}>
             <div id='who_create'>
                 <FooterCard
                     style={{

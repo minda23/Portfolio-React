@@ -5,12 +5,12 @@ import EducationCard from "./EducationCard"
 // chceme dať jeden prop tomu AboutMeCard 
 
 
-const Education = () => {
-
+const Education = (props) => {
+    const { scrollRef } = props;
     return (
 
 
-        <div id="education_description" style={{ marginLeft: "-3.5rem" }}>
+        <div ref={scrollRef} id="education_description" style={{ marginLeft: "-3.5rem" }}>
             <div className="headings_education">
                 <div>
                     <h5 style={{ marginBottom: "7rem", }}>Vzdelanie</h5>

@@ -1,6 +1,6 @@
 "use client"
 import React from "react";
-import { useState, useEffect, useRef, } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 
 // use context hook sa zdieľa ked chceme posuvať komponent bez propsu čiže je to čistejšie 

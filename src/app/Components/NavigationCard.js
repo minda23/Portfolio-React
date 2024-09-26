@@ -1,35 +1,26 @@
-import React from "react"
+import React from 'react';
+import "./Navigation.css";
 
 
 
 const NavigationCard = (props) => {
-    const { text, burger,
 
 
-    } = props;
+
+    const { name, clickref } = props;
+
+    const handleOnClick = () => {
+        if (clickref == null) return;//  "guardian clause" nechcem tuto funkciu uskutočniť bez toho aby bola podmienka 
+        // pravdivá;
+        clickref.current.scrollIntoView();
+    }
+
     return (
 
-        <div>
-            <nav id="navigation">
+        <li onClick={handleOnClick}>{name}</li> // kvoli javascriptu dávame špecialne zazvorky ako hodnotu atributu.
 
-                <ul>
-                    <li><a href="{text}">O mne</a></li>
-                    <li><a href="{text}">Schopnosti</a></li>
-                    <li><a href="{text}">Projekty</a></li>
-                    <li><a href="{text}">Vzdelanie</a></li>
-                    <li><a href="{text}">Kontakt</a></li>
-                </ul>
-            </nav>
-
-            <div id="burger_menu">
-                <img title="obrazok" src="{burger}" alt="logo" width="50" />
-
-            </div>
-            <div id="cross">
-                <img title="obrazok" src="{cross}" alt="logo" width="50" />
-            </div>
-        </div>
     )
 }
 
-export default NavigationCard
+export default NavigationCard;
+

@@ -9,7 +9,7 @@ import AboutMeCard from './AboutMeCard';
 
 
 
-const AboutMe = () => {
+const AboutMe = (props) => {
 
 
     /*
@@ -20,13 +20,14 @@ const AboutMe = () => {
    // a plus 
 */
     //html elements and styling
+    const { scrollRef } = props;
     return (
-        <div id="description">
+        <div id="description" ref={scrollRef}>
 
 
 
             <h3>Kto som?</h3>
-            <div className='text_about'>
+            <div className='text_about' >
 
 
                 <AboutMeCard text="Som technicky zameraný samouk s medzinárodnými skúsenosťami." />
