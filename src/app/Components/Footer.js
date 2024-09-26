@@ -3,6 +3,7 @@ import React from 'react';
 import "./Footer.css";
 import FooterCard from './FooterCard';
 import FooterButton from './FooterButton';
+import { FaArrowAltCircleUp } from 'react-icons/fa';
 
 const Footer = (props) => {
     const { scrollRef } = props;
@@ -22,8 +23,9 @@ const Footer = (props) => {
                             © Copyright by Lukáš Minda
                         </div>
                     }
-                    arrow={<FooterButton />}
+
                 />
+                <FooterButton Icon={FaArrowAltCircleUp} style={{ display: "flex", justifyContent: "right" }} />
             </div>
         </div>
     );

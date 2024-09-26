@@ -1,29 +1,16 @@
-import React from "react";
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
-const FooterButton = (props) => {
-
-    const [visible, setVisible] = useState("")
-
+const FooterButton = ({ Icon }) => {
+    const [visible, setVisible] = useState(false);
 
     useEffect(() => {
-        function toggleVisible() {
+        const toggleVisible = () => {
             const scrolled = document.documentElement.scrollTop;
             if (scrolled > 300) {
                 setVisible(true);
-            }
-            else if (scrolled <= 300) {
+            } else {
                 setVisible(false);
             }
-        }
-
-        const scrollToTop = () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-                /* you can also use 'auto' behaviour 
-                   in place of 'smooth' */
-            });
         };
 
         window.addEventListener('scroll', toggleVisible);
@@ -33,13 +20,36 @@ const FooterButton = (props) => {
         };
     }, []);
 
-    const { arrow } = props;
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
+
     return (
-        <div>
-            <FaArrowAltCircleUp onClick={scrollToTop} style={{ fontSize: "4rem", marginTop: "-3rem", display: visible ? 'inline' : 'none' }} />
+        <div
+            style={{
+                display: 'flex',
+                justifyContent: 'flex-end', // Align to the right
+                position: 'fixed', // Fix position to keep it in place while scrolling
+                bottom: '20px', // Adjust this value to position the button vertically
+                right: '20px',  // Adjust this value to position the button horizontally
+                width: '100%',
+                color: 'black' // Ensure the button container spans the entire width
+            }}
+        >
+            {visible && (
+                <Icon
+                    onClick={scrollToTop}
+                    style={{
+                        fontSize: '4rem',
+                        cursor: 'pointer',
+                    }}
+                />
+            )}
         </div>
     );
 };
-
 
 export default FooterButton;
