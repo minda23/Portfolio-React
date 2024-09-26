@@ -1,45 +1,59 @@
-"use client"
-import React from "react"
-import NavigationCard from "./NavigationCard"
-
-
-
+import React, { useState, useEffect } from "react";
+import NavigationCard from "./NavigationCard";
 
 const Navigation = (props) => {
-
     const { aboutMe, skills, projects, education, footer } = props;
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 600); // Initialize based on current window width
+
+    useEffect(() => {
+        // Add event listener to handle window resize
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 600);
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        // Cleanup the event listener on unmount
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    const toggleMenu = () => {
+        if (isMobile) {
+            setIsMenuOpen(!isMenuOpen);
+        }
+    };
+
     return (
-
-
-
-
         <div>
-
             <div>
-                <nav id="navigation" >
-
+                {/* Navigation Menu */}
+                <nav id="navigation" className={isMenuOpen ? "menu open" : "menu"}>
                     <ul>
-
                         <NavigationCard name="O mne" clickref={aboutMe} />
                         <NavigationCard name="Schopnosti" clickref={skills} />
                         <NavigationCard name="Projekty" clickref={projects} />
                         <NavigationCard name="Vzdelanie" clickref={education} />
                         <NavigationCard name="Kontakt" clickref={footer} />
-
                     </ul>
                 </nav>
 
-                <div id="burger_menu">
-                    <img title="obrazok" src="{burger}" alt="logo" width="50" />
+                {/* Burger Menu Icon */}
+                {isMobile && (
+                    <div id="burger_menu" onClick={toggleMenu} style={{ display: isMenuOpen ? "none" : "block" }}>
+                        <img title="obrazok" src="/images/hamburger.png" alt="logo" width="50" />
+                    </div>
+                )}
 
-                </div>
-                <div id="cross">
-                    <img title="obrazok" src="{cross}" alt="logo" width="50" />
-                </div>
+                {/* Cross Icon */}
+                {isMobile && (
+                    <div id="cross" onClick={toggleMenu} style={{ display: isMenuOpen ? "block" : "none" }}>
+                        <img title="obrazok" src="/images/cross.svg" alt="logo" width="50" />
+                    </div>
+                )}
             </div>
         </div>
-    )
-}
+    );
+};
 
-
-export default Navigation
+export default Navigation;
