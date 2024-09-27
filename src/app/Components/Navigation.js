@@ -4,7 +4,7 @@ import NavigationCard from "./NavigationCard";
 const Navigation = (props) => {
     const { aboutMe, skills, projects, education, footer } = props;
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 600); // Initialize based on current window width
+    const [isMobile, setIsMobile] = useState(false); // Initialize based on current window width
 
     useEffect(() => {
         // Add event listener to handle window resize
