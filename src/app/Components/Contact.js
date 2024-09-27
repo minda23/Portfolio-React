@@ -19,7 +19,7 @@ import { useState } from 'react';
 
 
 
-const Contact = () => {
+const Contact = () => { // tuna začina funkcia
     const [name, setName] = useState("");// chceme aby sa nastavila funkcia setName ked sa niečo zmeni v textarea.
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
