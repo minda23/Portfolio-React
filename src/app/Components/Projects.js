@@ -71,7 +71,7 @@ const Projects = (props) => {
 
                 <ProjectsCard imagePath="images/blog-preview.png" linkSite="https://blog-preview-minda.netlify.app" linkSource="https://github.com/minda23/Moje-projekty/blob/main/blog-preview-card-main-minda-lukas.zip" />
 
-                <ProjectsCard imagePath="images/localhost_3000_(1).png" linkSite="https://blog-preview-minda.netlify.app" linkSource="https://github.com/minda23/Moje-projekty/blob/main/blog-preview-card-main-minda-lukas.zip" />
+                <ProjectsCard imagePath="images/localhost_3000_(1).png" linkSite="https://spotify-clone-tau-orpin.vercel.app/" linkSource="https://github.com/minda23/spotify-clone" />
 
             </div>
         </div>
