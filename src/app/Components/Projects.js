@@ -19,10 +19,10 @@ const Projects = (props) => {
                 <ProjectsCard imagePath="images/portfolio.png" linkSite="https://portfolio-react-orpin-three.vercel.app/" linkSource="https://github.com/minda23/Portfolio-React" />
 
 
-                <ProjectsCard imagePath="images/shop_app.png" linkSite="https://product-list-1.netlify.app/" linkSource="https://github.com/minda23/Moje-projekty/blob/main/shopping-app.zip" />
+                <ProjectsCard imagePath="images/shop_app.png" linkSite="shopping-cart-minda.netlify.app" linkSource="https://github.com/minda23/Moje-projekty/blob/main/shopping-app.zip" />
 
 
-                <ProjectsCard imagePath="images/toDoapp.png" linkSite="https://todo-app-minda.netlify.app" linkSource="https://github.com/minda23/Moje-projekty/blob/main/task-manager.zip" />
+                <ProjectsCard imagePath="images /toDoapp.png" linkSite="https://todo-app-minda.netlify.app" linkSource="https://github.com/minda23/Moje-projekty/blob/main/task-manager.zip" />
 
 
 
@@ -73,6 +73,7 @@ const Projects = (props) => {
 
                 <ProjectsCard imagePath="images/spotify.png" linkSite="https://spotify-clone-tau-orpin.vercel.app/" linkSource="https://github.com/minda23/spotify-clone" />
 
+                <ProjectsCard imagePath="images/spotify.png" linkSite="https://identify-card-minda.netlify.app/" linkSource="https://github.com/minda23/Moje-projekty/blob/main/identify-card.zip" />
             </div>
         </div>
 
