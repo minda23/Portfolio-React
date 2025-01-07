@@ -19,7 +19,7 @@ const Projects = (props) => {
                 <ProjectsCard imagePath="images/portfolio.png" linkSite="https://portfolio-react-orpin-three.vercel.app/" linkSource="https://github.com/minda23/Portfolio-React" />
 
 
-                <ProjectsCard imagePath="images/shop_app.png" linkSite="shopping-cart-minda.netlify.app" linkSource="https://github.com/minda23/Moje-projekty/blob/main/shopping-app.zip" />
+                <ProjectsCard imagePath="images/shop_app.png" linkSite="https://shopping-cart-minda.netlify.app/" linkSource="https://github.com/minda23/Moje-projekty/blob/main/shopping-app.zip" />
 
 
                 <ProjectsCard imagePath="images /toDoapp.png" linkSite="https://todo-app-minda.netlify.app" linkSource="https://github.com/minda23/Moje-projekty/blob/main/task-manager.zip" />
@@ -66,7 +66,7 @@ const Projects = (props) => {
 
 
 
-                <ProjectsCard imagePath="images/quiz-app.png" linkSite="https://quiz-app-minda.netlify.app" linkSource="https://github.com/minda23/Moje-projekty/blob/main/frontend-quiz-app1.zip" />
+                <ProjectsCard imagePath="images/quiz-app.png" linkSite="https://quiz-app-minda.netlify.app/" linkSource="https://github.com/minda23/Moje-projekty/blob/main/frontend_quiz.zip" />
 
 
                 <ProjectsCard imagePath="images/blog-preview.png" linkSite="https://blog-preview-minda.netlify.app" linkSource="https://github.com/minda23/Moje-projekty/blob/main/blog-preview-card-main-minda-lukas.zip" />
