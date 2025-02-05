@@ -30,7 +30,7 @@ const Projects = (props) => {
 
 
 
-                <ProjectsCard imagePath="images/notification.png" linkSite="notificationappminda.netlify.app" linkSource="https://github.com/minda23/Moje-projekty/blob/main/notifications-page-main-minda.zip" />
+                <ProjectsCard imagePath="images/notification.png" linkSite="https://notificationappminda.netlify.app" linkSource="https://github.com/minda23/Moje-projekty/blob/main/notifications-page-main-minda.zip" />
 
 
 
