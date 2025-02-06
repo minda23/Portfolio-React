@@ -22,7 +22,7 @@ const Projects = (props) => {
                 <ProjectsCard imagePath="images/shop_app.png" linkSite="https://shopping-list-sigma-rosy.vercel.app/" linkSource="https://github.com/minda23/shoppingList" />
 
 
-                <ProjectsCard imagePath="images/todo_app.png" linkSite="https://todo-app-minda.netlify.app" linkSource="https://github.com/minda23/Moje-projekty/blob/main/task-manager.zip" />
+                <ProjectsCard imagePath="images/shop_app.png" linkSite="https://todo-app-minda.netlify.app" linkSource="https://github.com/minda23/Moje-projekty/blob/main/task-manager.zip" />
 
 
 
