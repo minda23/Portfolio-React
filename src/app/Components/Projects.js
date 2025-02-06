@@ -22,7 +22,7 @@ const Projects = (props) => {
                 <ProjectsCard imagePath="images/shop_app.png" linkSite="https://shopping-list-sigma-rosy.vercel.app/" linkSource="https://github.com/minda23/shoppingList" />
 
 
-                <ProjectsCard imagePath="./images/todoapp.png" linkSite="https://todo-app-minda.netlify.app" linkSource="https://github.com/minda23/Moje-projekty/blob/main/task-manager.zip" />
+                <ProjectsCard imagePath="images/todo_app.png" linkSite="https://todo-app-minda.netlify.app" linkSource="https://github.com/minda23/Moje-projekty/blob/main/task-manager.zip" />
 
 
 
@@ -39,10 +39,6 @@ const Projects = (props) => {
 
 
                 <ProjectsCard imagePath="images/generator_app.png" linkSite="https://generator-advice-minda.netlify.app" linkSource="https://github.com/minda23/Moje-projekty/blob/main/advice-generator-app-main.zip" />
-
-
-
-                <ProjectsCard imagePath="images/galeria.png" linkSite="https://gallery-minda-app.netlify.app/" linkSource="https://github.com/minda23/Moje-projekty/blob/main/galleria-slideshow-site.zip" />
 
 
 
