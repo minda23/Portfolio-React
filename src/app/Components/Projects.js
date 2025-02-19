@@ -43,7 +43,7 @@ const Projects = (props) => {
 
 
 
-                <ProjectsCard imagePath="images/pomodoro.png" linkSite="https://pomodoro-minda.netlify.app" linkSource="https://github.com/minda23/pomodoroApp" />
+                <ProjectsCard imagePath="images/pomodoro.png" linkSite="https://pomodoro-app-minda.netlify.app/" linkSource="https://github.com/minda23/pomodoroApp" />
 
 
 
