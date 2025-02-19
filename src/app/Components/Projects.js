@@ -13,8 +13,6 @@ const Projects = (props) => {
         <div id="projects" ref={scrollRef}>
             <div id='part_project'>
 
-                <ProjectsCard imagePath="images/front_end.png" linkSite="https://front-end.sk/index.html" linkSource="https://github.com/minda23/Moje-projekty/blob/main/robot-it_web.zip" />
-
 
                 <ProjectsCard imagePath="images/portfolio.png" linkSite="https://portfolio-react-orpin-three.vercel.app/" linkSource="https://github.com/minda23/Portfolio-React" />
 
@@ -23,11 +21,6 @@ const Projects = (props) => {
 
 
                 <ProjectsCard imagePath="images/todoapp.png" linkSite="https://todo-app-minda.netlify.app" linkSource="https://github.com/minda23/Moje-projekty/blob/main/task-manager.zip" />
-
-
-
-                <ProjectsCard imagePath="images/pay_app.png" linkSite="https://notappminda.netlify.app" linkSource="https://github.com/minda23/Moje-projekty/blob/main/card-payment-minda.zip" />
-
 
 
                 <ProjectsCard imagePath="images/notification.png" linkSite="https://notificationappminda.netlify.app" linkSource="https://github.com/minda23/Moje-projekty/blob/main/notifications-page-main-minda.zip" />
@@ -50,11 +43,11 @@ const Projects = (props) => {
 
 
 
-                <ProjectsCard imagePath="images/pomodoro.png" linkSite="https://pomodoro-minda.netlify.app" linkSource="https://github.com/minda23/Moje-projekty/blob/main/pomodoro-app_minda.zip" />
+                <ProjectsCard imagePath="images/pomodoro.png" linkSite="https://pomodoro-minda.netlify.app" linkSource="https://github.com/minda23/pomodoroApp" />
 
 
 
-                <ProjectsCard imagePath="images/passw_generator.png" linkSite="password-generator-minda.netlify.app" linkSource="https://github.com/minda23/Moje-projekty/blob/main/password-generator-app.zip" />
+                <ProjectsCard imagePath="images/passw_generator.png" linkSite="https://passowordgeneratorminda.netlify.app/" linkSource="https://github.com/minda23/Moje-projekty/blob/main/password-generator-app.zip" />
 
 
 
@@ -62,7 +55,7 @@ const Projects = (props) => {
 
 
 
-                <ProjectsCard imagePath="images/quiz-app.png" linkSite="https://quiz-app-minda.netlify.app/" linkSource="https://github.com/minda23/Moje-projekty/blob/main/frontend_quiz.zip" />
+                <ProjectsCard imagePath="images/quiz-app.png" linkSite="https://quiz-app-minda.netlify.app/" linkSource="https://github.com/minda23/Frontend-quiz" />
 
 
                 <ProjectsCard imagePath="images/blog-preview.png" linkSite="https://blog-preview-minda.netlify.app" linkSource="https://github.com/minda23/Moje-projekty/blob/main/blog-preview-card-main-minda-lukas.zip" />
