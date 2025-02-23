@@ -9,6 +9,7 @@ import Education from "./Components/Education";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
 import Navigation from "./Components/Navigation";
+import LanguageToggle from "./Components/LanguageToggle";
 import { useRef } from "react";
 import { I18nextProvider } from "react-i18next";
 import i18next from "./Components/i18next";
