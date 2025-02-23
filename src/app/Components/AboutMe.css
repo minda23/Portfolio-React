@@ -1,5 +1,7 @@
 #description {
     margin-top: 10rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
     text-align: center;
     display: flex;
     flex-direction: column;
