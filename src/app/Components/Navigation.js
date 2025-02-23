@@ -38,6 +38,8 @@ const Navigation = (props) => {
                     </ul>
                 </nav>
 
+                <LanguageToggle />
+
                 {/* Burger Menu Icon */}
                 {isMobile && (
                     <div
