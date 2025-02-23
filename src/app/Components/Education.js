@@ -2,39 +2,37 @@
 import React from 'react';
 import "./Education.css";
 import EducationCard from "./EducationCard";
-import { useTranslation } from 'react-i18next';
 
 const Education = (props) => {
     const { scrollRef } = props;
-    const { t } = useTranslation();
 
     return (
         <div ref={scrollRef} id="education_description" style={{ marginLeft: "-3.5rem" }}>
             <div className="headings_education">
                 <div>
-                    <h5 style={{ marginBottom: "7rem" }}>{t('education.header')}</h5>
+                    <h5 style={{ marginBottom: "7rem" }}>Vzdelanie</h5>
                 </div>
             </div>
             <div className="two_sections">
                 <div className="course_education" id="course">
-                    <EducationCard course={t('education.course.academy')} />
+                    <EducationCard course="WEB DEVELOPER ACADEMY" />
                     <div className='academy'>
-                        <EducationCard text={t('education.course.timeline')} />
+                        <EducationCard text="SmartyAcademy | Mar 2024 - Máj 2024" />
                     </div>
-                    <EducationCard text={t('education.course.description1')} />
-                    <EducationCard text={t('education.course.description2')} />
+                    <EducationCard text="Vytvoril som responzívnu webovú stránku v HTML a následne som do nej integroval JavaScript a jQuery" />
+                    <EducationCard text="Úspešne som zvládol 64 testov a dosiahol certifikát" />
                 </div>
                 <div className="school_education" id="course1">
                     <div>
-                        <h5 style={{ fontSize: "1.8rem" }}>{t('education.school.header')}</h5>
+                        <h5 style={{ fontSize: "1.8rem" }}>Technické lyceum</h5>
                     </div>
                     <div className="school">
-                        <EducationCard text={t('education.school.timeline')} />
+                        <EducationCard text="Stredná odborná škola technická v Humennom | Sep 2013 – Jún 2017" />
                     </div>
-                    <EducationCard text={t('education.school.description1')} />
-                    <EducationCard text={t('education.school.description2')} />
-                    <EducationCard text={t('education.school.description3')} />
-                    <EducationCard text={t('education.school.description4')} />
+                    <EducationCard text="Ukončil som štúdium maturitnou skúškou" />
+                    <EducationCard text="Programoval som v HTML, CSS, PHP a Joomla" />
+                    <EducationCard text="Pracoval som s grafickými programami Blender, Gimp, Inscape a" />
+                    <EducationCard text="strojárskym programom Solid Edge (3D CAD software)" />
                 </div>
             </div>
         </div>
@@ -42,3 +40,5 @@ const Education = (props) => {
 };
 
 export default Education;
+
+

@@ -12,8 +12,8 @@ const Skills = (props) => {
         <div id="skills" ref={scrollRef}>
             <div id="skills_main">
                 <div className='skill_text'>
-                    <h4 style={{ marginBottom: "1rem" }}>{t('skills.header')}</h4>
-                    <p style={{ marginBottom: "1rem" }}>{t('skills.subheader')}</p>
+                    <h4 style={{ marginBottom: "1rem" }}>Schopnosti a nástroje</h4>
+                    <p style={{ marginBottom: "1rem" }}>Tieto technológie ovládam:</p>
                 </div>
                 <div id='skills_images'>
                     <SkillsCard image="images/html.svg" />

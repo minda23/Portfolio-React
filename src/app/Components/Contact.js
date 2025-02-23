@@ -25,27 +25,27 @@ const Contact = () => {
     return (
         <div id='contact'>
             <div id="heading_contact">
-                <h6>Contact Us</h6>
-                <p>We would love to hear from you!</p>
+                <h6>Kontaktujte ma</h6>
+                <p>Ozvite sa</p>
             </div>
             <div className="headings_contact">
                 <div>
                     <div style={{ textAlign: "center", marginBottom: "1rem" }}>
                         <h6 style={{ fontSize: "1.3rem" }} className="call_me">
-                            Call Me
+                            Ozvite sa
                         </h6>
                     </div>
                     <div className="contact_item">
                         <ContactInfo
-                            text="Lukáš Minda"
+                            text="Meno: Lukáš Minda"
                             icon={<FaPerson style={{ fontSize: '1rem', margin: '10px' }} />}
                         />
                         <ContactInfo
-                            text="Location"
+                            text="Humenné, Slovensko"
                             icon={<CiLocationOn style={{ fontSize: '1rem', margin: '10px' }} />}
                         />
                         <ContactInfo
-                            text="email@example.com"
+                            text="Email: luki.minda@gmail.com"
                             icon={<FaEnvelope style={{ fontSize: '1rem', margin: '10px' }} />}
                         />
                     </div>
@@ -54,7 +54,7 @@ const Contact = () => {
                     <div>
                         <div style={{ textAlign: "center", marginBottom: "1rem" }}>
                             <h6 style={{ fontSize: "1.3rem" }} className="write_me">
-                                Write Me
+                                Napíšte mi
                             </h6>
                         </div>
                         <div className="container">

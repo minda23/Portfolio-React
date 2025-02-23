@@ -27,11 +27,11 @@ const Navigation = (props) => {
             <div>
                 <nav id="navigation" className={isMenuOpen ? "menu open" : "menu"}>
                     <ul>
-                        <NavigationCard name="About Me" clickref={aboutMe} />
-                        <NavigationCard name="Skills" clickref={skills} />
-                        <NavigationCard name="Projects" clickref={projects} />
-                        <NavigationCard name="Education" clickref={education} />
-                        <NavigationCard name="Contact" clickref={footer} />
+                        <NavigationCard name="O mne" clickref={aboutMe} />
+                        <NavigationCard name="Schopnosti" clickref={skills} />
+                        <NavigationCard name="Projekty" clickref={projects} />
+                        <NavigationCard name="Vzdelanie" clickref={education} />
+                        <NavigationCard name="Kontakt" clickref={footer} />
                     </ul>
                 </nav>
 
