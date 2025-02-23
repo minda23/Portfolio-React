@@ -8,7 +8,7 @@ const AboutMe = (props) => {
 
     return (
         <div ref={scrollRef} id="about_me">
-            <h3>O mne</h3>
+            <h3 id='description'>O mne</h3>
             <div className="text_about">
                 <AboutMeCard text="Som technicky zameraný samouk s medzinárodnými skúsenosťami." />
                 <AboutMeCard text="Hľadám príležitosť profesionálne rásť ako Front-end developer po rokoch individuálneho štúdia." />

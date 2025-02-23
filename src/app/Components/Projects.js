@@ -12,8 +12,7 @@ const Projects = (props) => {
     return (
         <div id="projects" ref={scrollRef}>
             <div id='part_project'>
-                cccc
-                dwvwebt
+
                 <ProjectsCard imagePath="images/portfolio.png" linkSite="https://portfolio-react-orpin-three.vercel.app/" linkSource="https://github.com/minda23/Portfolio-React" />
 
 
