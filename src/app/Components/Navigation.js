@@ -27,7 +27,7 @@ const Navigation = (props) => {
     return (
         <div>
             <div>
-                {/* Navigation Menu */}
+
                 <nav id="navigation" className={isMenuOpen ? "menu open" : "menu"}>
                     <ul>
                         <NavigationCard name={t('nav.aboutMe')} clickref={aboutMe} />
@@ -40,7 +40,7 @@ const Navigation = (props) => {
 
                 <LanguageToggle />
 
-                {/* Burger Menu Icon */}
+
                 {isMobile && (
                     <div
                         id="burger_menu"
@@ -56,7 +56,7 @@ const Navigation = (props) => {
                     </div>
                 )}
 
-                {/* Cross Icon */}
+
                 {isMobile && (
                     <div
                         id="cross"
