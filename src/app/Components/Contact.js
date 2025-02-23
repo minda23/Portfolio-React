@@ -1,6 +1,5 @@
 "use client"
 import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
 import ContactInfo from './ContactInfo';
 import ContactForm from './ContactForm';
 import InputCard from './InputCard';
@@ -10,7 +9,6 @@ import { CiLocationOn } from "react-icons/ci";
 import { FaEnvelope } from "react-icons/fa";
 
 const Contact = () => {
-    const { t } = useTranslation();
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
@@ -27,27 +25,27 @@ const Contact = () => {
     return (
         <div id='contact'>
             <div id="heading_contact">
-                <h6>{t('heading')}</h6>
-                <p>{t('subheading')}</p>
+                <h6>Contact Us</h6>
+                <p>We would love to hear from you!</p>
             </div>
             <div className="headings_contact">
                 <div>
                     <div style={{ textAlign: "center", marginBottom: "1rem" }}>
                         <h6 style={{ fontSize: "1.3rem" }} className="call_me">
-                            {t('callMe')}
+                            Call Me
                         </h6>
                     </div>
                     <div className="contact_item">
                         <ContactInfo
-                            text={t('infoName')}
+                            text="Lukáš Minda"
                             icon={<FaPerson style={{ fontSize: '1rem', margin: '10px' }} />}
                         />
                         <ContactInfo
-                            text={t('infoLocation')}
+                            text="Location"
                             icon={<CiLocationOn style={{ fontSize: '1rem', margin: '10px' }} />}
                         />
                         <ContactInfo
-                            text={t('infoEmail')}
+                            text="email@example.com"
                             icon={<FaEnvelope style={{ fontSize: '1rem', margin: '10px' }} />}
                         />
                     </div>
@@ -56,7 +54,7 @@ const Contact = () => {
                     <div>
                         <div style={{ textAlign: "center", marginBottom: "1rem" }}>
                             <h6 style={{ fontSize: "1.3rem" }} className="write_me">
-                                {t('writeMe')}
+                                Write Me
                             </h6>
                         </div>
                         <div className="container">
@@ -69,7 +67,7 @@ const Contact = () => {
                             <input
                                 type="button"
                                 className="button"
-                                value={t('submit')}
+                                value="Submit"
                                 onClick={handleSubmit}
                             />
                         </div>
