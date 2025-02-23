@@ -29,8 +29,8 @@ nav {
 }
 
 .toggleButton {
-    text-align: left;
-    padding: 1rem;
+    border-radius: 1rem;
+    padding: 3rem;
     font-weight: bold;
 }
 
