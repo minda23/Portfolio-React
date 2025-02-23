@@ -17,6 +17,7 @@ const AboutMe = (props) => {
                 <AboutMeCard text={t('aboutMe.card3')} />
                 <AboutMeCard text={t('aboutMe.card4')} />
             </div>
+            ahoj
         </div>
     );
 };
