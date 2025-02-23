@@ -24,6 +24,21 @@ const Navigation = (props) => {
         }
     };
 
+    const LanguageToggle = () => {
+        const { i18n } = useTranslation();
+
+        const toggleLanguage = () => {
+            const newLang = i18n.language === 'sk' ? 'en' : 'sk';
+            i18n.changeLanguage(newLang);
+        };
+
+        return (
+            <button onClick={toggleLanguage}>
+                {i18n.language === 'sk' ? 'Switch to English' : 'Prepnúť na slovenčinu'}
+            </button>
+        );
+    };
+
     return (
         <div>
             <div>
@@ -38,8 +53,8 @@ const Navigation = (props) => {
                     </ul>
                 </nav>
 
-                <LanguageToggle />
 
+                <LanguageToggle />
 
                 {isMobile && (
                     <div
