@@ -12,6 +12,7 @@ import Navigation from "./Components/Navigation";
 import { useRef } from "react";
 import { I18nextProvider } from "react-i18next";
 import i18next from "./Components/i18next";
+import LanguageToggle from "./Components/LanguageToggle";
 
 export default function Home() {
   const aboutMe = useRef(null);
@@ -39,6 +40,7 @@ export default function Home() {
         <Education scrollRef={education} />
         <Contact scrollRef={contact} />
         <Footer scrollRef={footer} />
+        <LanguageToggle />
       </div>
     </I18nextProvider>
   );
