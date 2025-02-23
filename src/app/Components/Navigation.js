@@ -54,7 +54,7 @@ const Navigation = (props) => {
                 </nav>
 
 
-                <LanguageToggle />
+                <LanguageToggle className="toggleButton" />
 
                 {isMobile && (
                     <div

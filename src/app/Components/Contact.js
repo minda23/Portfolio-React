@@ -27,27 +27,27 @@ const Contact = () => {
     return (
         <div id='contact'>
             <div id="heading_contact">
-                <h6>{t('contact.heading')}</h6>
-                <p>{t('contact.subheading')}</p>
+                <h6>{t('heading')}</h6>
+                <p>{t('subheading')}</p>
             </div>
             <div className="headings_contact">
                 <div>
                     <div style={{ textAlign: "center", marginBottom: "1rem" }}>
                         <h6 style={{ fontSize: "1.3rem" }} className="call_me">
-                            {t('contact.callMe')}
+                            {t('callMe')}
                         </h6>
                     </div>
                     <div className="contact_item">
                         <ContactInfo
-                            text={t('contact.infoName')}
+                            text={t('infoName')}
                             icon={<FaPerson style={{ fontSize: '1rem', margin: '10px' }} />}
                         />
                         <ContactInfo
-                            text={t('contact.infoLocation')}
+                            text={t('infoLocation')}
                             icon={<CiLocationOn style={{ fontSize: '1rem', margin: '10px' }} />}
                         />
                         <ContactInfo
-                            text={t('contact.infoEmail')}
+                            text={t('infoEmail')}
                             icon={<FaEnvelope style={{ fontSize: '1rem', margin: '10px' }} />}
                         />
                     </div>
@@ -56,7 +56,7 @@ const Contact = () => {
                     <div>
                         <div style={{ textAlign: "center", marginBottom: "1rem" }}>
                             <h6 style={{ fontSize: "1.3rem" }} className="write_me">
-                                {t('contact.writeMe')}
+                                {t('writeMe')}
                             </h6>
                         </div>
                         <div className="container">
@@ -69,7 +69,7 @@ const Contact = () => {
                             <input
                                 type="button"
                                 className="button"
-                                value={t('contact.submit')}
+                                value={t('submit')}
                                 onClick={handleSubmit}
                             />
                         </div>
