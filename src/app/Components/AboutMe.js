@@ -1,42 +1,24 @@
-"use client";
-import "./AboutMe.css";
+"use client"
+import React from 'react';
 import AboutMeCard from './AboutMeCard';
-
-
-
-
-
-
-
+import "./AboutMe.css";
+import { useTranslation } from 'react-i18next';
 
 const AboutMe = (props) => {
-
-
-    /*
-    
-   // domáca uloha je  zvlášť po sebe aby sa zobrazili tie štyri divka komponenty
-   // čiže ak prejdeme terat tak nam vypiše že in in view a zobrazia sa všetky divka naraz
-   // musime nejak nastaviť aby ak budeme na nej
-   // a plus 
-*/
-    //html elements and styling
     const { scrollRef } = props;
+    const { t } = useTranslation();
+
     return (
-        <div id="description" ref={scrollRef}>
-
-
-
-            <h3>Kto som?</h3>
-            <div className='text_about' >
-
-
-                <AboutMeCard text="Som technicky zameraný samouk s medzinárodnými skúsenosťami." />
-                <AboutMeCard text="Hľadám príležitosť profesionálne rásť ako Front-end developer po rokoch individuálneho štúdia." />
-                <AboutMeCard text="Som veľmi proaktívny a rád sa učím nové veci." />
-                <AboutMeCard text="Vo voľnom čase rád cvičím kalisteniku a programujem weby." />
+        <div ref={scrollRef} id="about_me">
+            <h3>{t('aboutMe.header')}</h3>
+            <div className="text_about">
+                <AboutMeCard text={t('aboutMe.card1')} />
+                <AboutMeCard text={t('aboutMe.card2')} />
+                <AboutMeCard text={t('aboutMe.card3')} />
+                <AboutMeCard text={t('aboutMe.card4')} />
             </div>
         </div>
     );
-}
+};
 
 export default AboutMe;
