@@ -11,7 +11,7 @@ import Footer from "./Components/Footer";
 import Navigation from "./Components/Navigation";
 import { useRef } from "react";
 import { I18nextProvider } from "react-i18next";
-import i18n from "./Components/i18n";
+import i18next from "./Components/i18next";
 
 export default function Home() {
   const aboutMe = useRef(null);
@@ -22,7 +22,7 @@ export default function Home() {
   const footer = useRef(null);
 
   return (
-    <I18nextProvider i18n={i18n}>
+    <I18nextProvider i18n={i18next}>
       <div>
         <Navigation
           aboutMe={aboutMe}
