@@ -23,6 +23,8 @@
 
 
 
+
+
 nav {
     text-align: right;
 
@@ -80,6 +82,11 @@ nav ul li a:hover {
         overflow: hidden;
         transform: translateY(-100%);
         transition: transform 0.5s ease, height 0.5s ease;
+    }
+
+    #cross {
+        margin-top: 0.4rem;
+        margin-left: 0.4rem;
     }
 
 }
