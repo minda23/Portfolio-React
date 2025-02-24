@@ -4,29 +4,44 @@ import NavigationCard from "./NavigationCard";
 const Navigation = (props) => {
     const { aboutMe, skills, projects, education, footer } = props;
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isMobile, setIsMobile] = useState(false); // Initialize based on current window width
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth <= 600);
+            const mobileCheck = window.innerWidth <= 600;
+            setIsMobile(mobileCheck);
+
+            if (!mobileCheck) {
+                setIsMenuOpen(true);
+            }
         };
 
-        window.addEventListener("resize", handleResize);
+        setIsMenuOpen(!isMobile);
 
+        window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
-    }, []);
+    }, [isMobile]);
 
     const toggleMenu = () => {
-        if (isMobile) {
-            setIsMenuOpen(!isMenuOpen);
-        }
+        setIsMenuOpen(!isMenuOpen);
     };
 
     return (
         <div>
-            <div>
 
-                <nav id="navigation" className={isMenuOpen ? "menu open" : "menu"}>
+            {isMobile && (
+                <div
+                    id="burger_menu"
+                    onClick={toggleMenu}
+                    style={{ cursor: "pointer", margin: "1rem" }}
+                >
+                    <span>☰</span>
+                </div>
+            )}
+
+
+            {(!isMobile || (isMobile && isMenuOpen)) && (
+                <nav id="navigation" className={isMobile ? "menu mobile" : "menu desktop"}>
                     <ul>
                         <NavigationCard name="O mne" clickref={aboutMe} />
                         <NavigationCard name="Schopnosti" clickref={skills} />
@@ -35,17 +50,9 @@ const Navigation = (props) => {
                         <NavigationCard name="Kontakt" clickref={footer} />
                     </ul>
                 </nav>
-
-
-                {isMobile && (
-                    <div id="burger_menu" onClick={toggleMenu} style={{ display: isMenuOpen ? "none" : "block" }}>
-
-
-                    </div>
-                )}
-            </div>
+            )}
         </div>
-    )
-}
+    );
+};
 
-export default Navigation
+export default Navigation;
