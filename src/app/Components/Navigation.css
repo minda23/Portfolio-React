@@ -1,88 +1,88 @@
 .menu {
     height: auto;
 
+}
+
+.menu.open {
+    height: auto;
+    transform: translateY(0);
+}
 
 
-    .menu.open {
-        height: auto;
-        transform: translateY(0);
+/* Burger and cross transition (optional) */
+#burger_menu,
+#cross {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+
+
+
+
+
+nav {
+    text-align: right;
+
+}
+
+.toggleButton {
+    border-radius: 1rem;
+    padding: 3rem;
+    font-weight: bold;
+}
+
+
+nav ul li {
+    margin-top: 1rem;
+    display: inline-block;
+    margin-right: 1rem;
+    padding: 1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+
+
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #363945;
+    transition: transform 0.5s ease-in-out, color 0.5s;
+
+}
+
+nav ul li:last-child {
+    border: 1px solid none;
+    padding: 1rem;
+    border-radius: 1rem;
+    transition: transform 1s ease-in-out, background-color 0.5s;
+}
+
+nav ul li:last-child:hover {
+    background-color: white;
+
+
+}
+
+
+nav ul li a:hover {
+    color: #0096C7;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .menu {
+        height: 0;
+        overflow: hidden;
+        transform: translateY(-100%);
+        transition: transform 0.5s ease, height 0.5s ease;
     }
 
-
-    /* Burger and cross transition (optional) */
-    #burger_menu,
     #cross {
-        cursor: pointer;
-        transition: opacity 0.3s ease;
+        margin-top: 0.4rem;
+        margin-left: 0.4rem;
     }
 
-
-
-
-
-
-    nav {
-        text-align: right;
-
-    }
-
-    .toggleButton {
-        border-radius: 1rem;
-        padding: 3rem;
-        font-weight: bold;
-    }
-
-
-    nav ul li {
-        margin-top: 1rem;
-        display: inline-block;
-        margin-right: 1rem;
-        padding: 1rem;
-        font-size: 1.3rem;
-        font-weight: bold;
-        color: black;
-        cursor: pointer;
-
-
-    }
-
-    nav ul li a {
-        text-decoration: none;
-        color: #363945;
-        transition: transform 0.5s ease-in-out, color 0.5s;
-
-    }
-
-    nav ul li:last-child {
-        border: 1px solid none;
-        padding: 1rem;
-        border-radius: 1rem;
-        transition: transform 1s ease-in-out, background-color 0.5s;
-    }
-
-    nav ul li:last-child:hover {
-        background-color: white;
-
-
-    }
-
-
-    nav ul li a:hover {
-        color: #0096C7;
-    }
-
-
-    @media only screen and (max-width: 600px) {
-        .menu {
-            height: 0;
-            overflow: hidden;
-            transform: translateY(-100%);
-            transition: transform 0.5s ease, height 0.5s ease;
-        }
-
-        #cross {
-            margin-top: 0.4rem;
-            margin-left: 0.4rem;
-        }
-
-    }
+}
