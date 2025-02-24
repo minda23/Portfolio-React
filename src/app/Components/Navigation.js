@@ -1,20 +1,20 @@
-"use client"
 import React, { useState, useEffect } from "react";
 import NavigationCard from "./NavigationCard";
-import { useTranslation } from "react-i18next";
 
 const Navigation = (props) => {
     const { aboutMe, skills, projects, education, footer } = props;
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isMobile, setIsMobile] = useState(false);
-    const { t } = useTranslation();
+    const [isMobile, setIsMobile] = useState(false); // Initialize based on current window width
 
     useEffect(() => {
+        // Add event listener to handle window resize
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 600);
         };
 
         window.addEventListener("resize", handleResize);
+
+        // Cleanup the event listener on unmount
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
@@ -24,71 +24,20 @@ const Navigation = (props) => {
         }
     };
 
-    const LanguageToggle = () => {
-        const { i18n } = useTranslation();
-
-        const toggleLanguage = () => {
-            const newLang = i18n.language === 'sk' ? 'en' : 'sk';
-            i18n.changeLanguage(newLang);
-        };
-
-        return (
-            <button onClick={toggleLanguage}>
-                {i18n.language === 'sk' ? 'Switch to English' : 'Prepnúť na slovenčinu'}
-            </button>
-        );
-    };
-
     return (
         <div>
             <div>
-
+                {/* Navigation Menu */}
                 <nav id="navigation" className={isMenuOpen ? "menu open" : "menu"}>
                     <ul>
-                        <NavigationCard name={t('nav.aboutMe')} clickref={aboutMe} />
-                        <NavigationCard name={t('nav.skills')} clickref={skills} />
-                        <NavigationCard name={t('nav.projects')} clickref={projects} />
-                        <NavigationCard name={t('nav.education')} clickref={education} />
-                        <NavigationCard name={t('nav.contact')} clickref={footer} />
+                        <NavigationCard name="O mne" clickref={aboutMe} />
+                        <NavigationCard name="Schopnosti" clickref={skills} />
+                        <NavigationCard name="Projekty" clickref={projects} />
+                        <NavigationCard name="Vzdelanie" clickref={education} />
+                        <NavigationCard name="Kontakt" clickref={footer} />
                     </ul>
                 </nav>
 
-
-                <LanguageToggle className="toggleButton" />
-
+                {/* Burger Menu Icon */}
                 {isMobile && (
-                    <div
-                        id="burger_menu"
-                        onClick={toggleMenu}
-                        style={{ display: isMenuOpen ? "none" : "block" }}
-                    >
-                        <img
-                            title="obrazok"
-                            src="/images/hamburger.png"
-                            alt="logo"
-                            width="50"
-                        />
-                    </div>
-                )}
-
-
-                {isMobile && (
-                    <div
-                        id="cross"
-                        onClick={toggleMenu}
-                        style={{ display: isMenuOpen ? "block" : "none" }}
-                    >
-                        <img
-                            title="obrazok"
-                            src="/images/cross.svg"
-                            alt="logo"
-                            width="50"
-                        />
-                    </div>
-                )}
-            </div>
-        </div>
-    );
-};
-
-export default Navigation;
+                    <div id="burger_menu" onClick={toggleMenu} style={{ display: isMenuOpen ? "none" : "block" }}></div>
