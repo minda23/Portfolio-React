@@ -7,14 +7,12 @@ const Navigation = (props) => {
     const [isMobile, setIsMobile] = useState(false); // Initialize based on current window width
 
     useEffect(() => {
-        // Add event listener to handle window resize
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 600);
         };
 
         window.addEventListener("resize", handleResize);
 
-        // Cleanup the event listener on unmount
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
@@ -27,7 +25,7 @@ const Navigation = (props) => {
     return (
         <div>
             <div>
-                {/* Navigation Menu */}
+
                 <nav id="navigation" className={isMenuOpen ? "menu open" : "menu"}>
                     <ul>
                         <NavigationCard name="O mne" clickref={aboutMe} />
@@ -38,7 +36,7 @@ const Navigation = (props) => {
                     </ul>
                 </nav>
 
-                {/* Burger Menu Icon */}
+
                 {isMobile && (
                     <div id="burger_menu" onClick={toggleMenu} style={{ display: isMenuOpen ? "none" : "block" }}>
 
