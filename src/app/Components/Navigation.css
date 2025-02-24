@@ -1,12 +1,3 @@
-/* Default styles when the menu is open or closed */
-.menu {
-    height: auto;
-    /* By default, the menu is fully expanded */
-}
-
-/* Apply the sliding effect only under 600px */
-
-
 .menu.open {
     height: auto;
     transform: translateY(0);
