@@ -4,55 +4,53 @@ import NavigationCard from "./NavigationCard";
 const Navigation = (props) => {
     const { aboutMe, skills, projects, education, footer } = props;
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
+    const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
+        // Add event listener to handle window resize
         const handleResize = () => {
-            const mobileCheck = window.innerWidth <= 600;
-            setIsMobile(mobileCheck);
-
-            if (!mobileCheck) {
-                setIsMenuOpen(true);
-            }
+            setIsMobile(window.innerWidth <= 600);
         };
 
-        setIsMenuOpen(!isMobile);
-
         window.addEventListener("resize", handleResize);
+
+        // Initial check
+        handleResize();
+
         return () => window.removeEventListener("resize", handleResize);
-    }, [isMobile]);
+    }, []);
 
     const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
+        if (isMobile) {
+            setIsMenuOpen(!isMenuOpen);
+        }
     };
 
     return (
         <div>
+            <div>
+                {/* Burger Menu Icon */}
+                {isMobile && (
+                    <div id="burger_menu" onClick={toggleMenu} style={{ display: isMenuOpen ? "none" : "block" }}>
+                        &#9776; {/* This is a simple burger icon */}
+                    </div>
+                )}
 
-            {isMobile && (
-                <div
-                    id="burger_menu"
-                    onClick={toggleMenu}
-                    style={{ cursor: "pointer", margin: "1rem" }}
-                >
-                    <span>☰</span>
-                </div>
-            )}
-
-
-            {(!isMobile || (isMobile && isMenuOpen)) && (
-                <nav id="navigation" className={isMobile ? "menu mobile" : "menu desktop"}>
-                    <ul>
-                        <NavigationCard name="O mne" clickref={aboutMe} />
-                        <NavigationCard name="Schopnosti" clickref={skills} />
-                        <NavigationCard name="Projekty" clickref={projects} />
-                        <NavigationCard name="Vzdelanie" clickref={education} />
-                        <NavigationCard name="Kontakt" clickref={footer} />
-                    </ul>
-                </nav>
-            )}
+                {/* Navigation Menu */}
+                {isMobile && isMenuOpen && (
+                    <nav id="navigation" className="menu open">
+                        <ul>
+                            <NavigationCard name="O mne" clickref={aboutMe} />
+                            <NavigationCard name="Schopnosti" clickref={skills} />
+                            <NavigationCard name="Projekty" clickref={projects} />
+                            <NavigationCard name="Vzdelanie" clickref={education} />
+                            <NavigationCard name="Kontakt" clickref={footer} />
+                        </ul>
+                    </nav>
+                )}
+            </div>
         </div>
-    );
-};
+    )
+}
 
 export default Navigation;
