@@ -40,4 +40,14 @@ const Navigation = (props) => {
 
                 {/* Burger Menu Icon */}
                 {isMobile && (
-                    <div id="burger_menu" onClick={toggleMenu} style={{ display: isMenuOpen ? "none" : "block" }}></div>
+                    <div id="burger_menu" onClick={toggleMenu} style={{ display: isMenuOpen ? "none" : "block" }}>
+
+
+                    </div>
+                )}
+            </div>
+        </div>
+    )
+}
+
+export default Navigation
