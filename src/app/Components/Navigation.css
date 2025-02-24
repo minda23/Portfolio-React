@@ -60,15 +60,23 @@ nav ul li:last-child {
     transition: transform 1s ease-in-out, background-color 0.5s;
 }
 
-nav ul li:last-child:hover {
-    background-color: white;
 
-
-}
 
 
 nav ul li a:hover {
     color: #0096C7;
+}
+
+@media only screen and (max-width: 1000px) {
+    .menu {
+        display: none;
+    }
+
+    #cross {
+        margin-top: 0.4rem;
+        margin-left: 0.4rem;
+    }
+
 }
 
 
