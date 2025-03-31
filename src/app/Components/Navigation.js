@@ -4,7 +4,7 @@ import NavigationCard from "./NavigationCard";
 const Navigation = (props) => {
     const { aboutMe, skills, projects, education, footer } = props;
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isMobile, setIsMobile] = useState(false); // Initialize based on current window width
+    const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
         const handleResize = () => {
@@ -24,7 +24,6 @@ const Navigation = (props) => {
     return (
         <div>
             <div>
-                {/* Navigation Menu */}
                 <nav id="navigation" className={isMenuOpen ? "menu open" : "menu"}>
                     <ul>
                         <NavigationCard name="O mne" clickref={aboutMe} />
@@ -35,14 +34,14 @@ const Navigation = (props) => {
                     </ul>
                 </nav>
 
-                {/* Burger Menu Icon */}
+
                 {isMobile && (
                     <div id="burger_menu" onClick={toggleMenu} style={{ display: isMenuOpen ? "none" : "block" }}>
                         <img title="obrazok" src="/images/hamburger.png" alt="logo" width="50" />
                     </div>
                 )}
 
-                {/* Cross Icon */}
+
                 {isMobile && (
                     <div id="cross" onClick={toggleMenu} style={{ display: isMenuOpen ? "block" : "none" }}>
                         <img title="obrazok" src="/images/cross.svg" alt="logo" width="50" />
