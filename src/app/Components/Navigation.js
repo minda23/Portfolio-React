@@ -7,14 +7,11 @@ const Navigation = (props) => {
     const [isMobile, setIsMobile] = useState(false); // Initialize based on current window width
 
     useEffect(() => {
-        // Add event listener to handle window resize
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 600);
         };
 
-        window.addEventListener("resize", handleResize);
-
-        // Cleanup the event listener on unmount
+        window.onclick("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
