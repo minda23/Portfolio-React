@@ -11,8 +11,8 @@ const Navigation = (props) => {
             setIsMobile(window.innerWidth <= 600);
         };
 
-        window.onclick("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
+        window.onresize = handleResize;
+        return () => (window.onresize = null);
     }, []);
 
     const toggleMenu = () => {
